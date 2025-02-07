@@ -16,6 +16,10 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #pragma once
 
 typedef enum DN_LogLevel {
@@ -39,3 +43,7 @@ void dn_logger_log(DN_LogLevel log_level, const char* format, ...);
 #define DN_LOG_WARN(format, ...) dn_logger_log(DN_LOG_LEVEL_WARN, format, __VA_ARGS__)
 #define DN_LOG_ERROR(format, ...) dn_logger_log(DN_LOG_LEVEL_ERROR, format, __VA_ARGS__)
 #define DN_LOG_FATAL(format, ...) dn_logger_log(DN_LOG_LEVEL_FATAL, format, __VA_ARGS__)
+
+#ifdef __cplusplus
+}
+#endif

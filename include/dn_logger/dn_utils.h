@@ -16,6 +16,10 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #pragma once
 
 #include <stdint.h>
@@ -37,3 +41,7 @@ typedef bool b8;
 typedef int b32;
 
 typedef size_t usize;
+
+#ifdef __cplusplus
+}
+#endif
